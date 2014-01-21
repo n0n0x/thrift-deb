@@ -1,5 +1,7 @@
 Apache Thrift Version 0.9.1 with debian dir for fb303
 
+NOTE: THIS REPO ONLY BUILDS PYTHON AND C/C++ LIBS
+
 original repo: https://git-wip-us.apache.org/repos/asf?p=thrift.git
 
 0.9.1 branch: https://git-wip-us.apache.org/repos/asf?p=thrift.git;a=shortlog;h=refs/heads/0.9.1
