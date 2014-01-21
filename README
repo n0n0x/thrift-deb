@@ -1,7 +1,18 @@
-The Debian dir for thrift-fb303
-----------------------------
+Apache Thrift Version 0.9.1 with debian dir for fb303
 
-All credits go to goffinet
+original repo: https://git-wip-us.apache.org/repos/asf?p=thrift.git
 
-https://github.com/simplegeo/thrift-fb303
+0.9.1 branch: https://git-wip-us.apache.org/repos/asf?p=thrift.git;a=shortlog;h=refs/heads/0.9.1
 
+clone 0.9.1 branch:
+git clone -b 0.9.1 https://git-wip-us.apache.org/repos/asf/thrift.git thrift-0.9.1
+
+Build:
+
+- clone this repo
+$ cd thrift-deb
+$ dpkg-buildpackage -tc
+$ cd contrib/fb303
+$ dpkg-buildpackage -tc
+
+  -tc clean source tree when finished.
