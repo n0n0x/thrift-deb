@@ -102,16 +102,16 @@ install-arch:
 	rmdir $(CURDIR)/debian/thrift-compiler/usr/sbin
 
 	# Python
-	cd $(CURDIR)/lib/py && \
-	for py in $(PYVERS); do \
-		$$py setup.py install --no-compile --root=$(CURDIR)/debian/python-thrift; \
-		$$py-dbg setup.py install --no-compile --root=$(CURDIR)/debian/python-thrift-dbg; \
-	done
+	#cd $(CURDIR)/lib/py && \
+	#for py in $(PYVERS); do \
+	#	$$py setup.py install --no-compile --root=$(CURDIR)/debian/python-thrift; \
+	#	$$py-dbg setup.py install --no-compile --root=$(CURDIR)/debian/python-thrift-dbg; \
+	#done
 
-	find $(CURDIR)/debian/python-thrift-dbg -name "*.pyc" -print0 | xargs -0 rm -f
-	find $(CURDIR)/debian/python-thrift-dbg -name "*.py" -print0 | xargs -0 rm -f
-	find $(CURDIR)/debian/python-thrift-dbg -name "*.egg-info" -print0 | xargs -0 rm -rf
-	find $(CURDIR)/debian/python-thrift-dbg -depth -type d -empty -exec rmdir {} \;
+	#find $(CURDIR)/debian/python-thrift-dbg -name "*.pyc" -print0 | xargs -0 rm -f
+	#find $(CURDIR)/debian/python-thrift-dbg -name "*.py" -print0 | xargs -0 rm -f
+	#find $(CURDIR)/debian/python-thrift-dbg -name "*.egg-info" -print0 | xargs -0 rm -rf
+	#find $(CURDIR)/debian/python-thrift-dbg -depth -type d -empty -exec rmdir {} \;
 
 	# C++ and C (glib)
 	mkdir -p $(CURDIR)/debian/tmp; \
@@ -134,8 +134,8 @@ binary-common:
 	dh_installexamples
 	dh_installman
 	dh_link
-	dh_strip -Npython-thrift-dbg -Nthrift-compiler -Nlibthrift0 --dbg=python-thrift-dbg
-	dh_strip -Npython-thrift-dbg
+	dh_strip -Nthrift-compiler -Nlibthrift0 #--dbg=python-thrift-dbg -Npython-thrift-dbg
+	#dh_strip -Npython-thrift-dbg
 	dh_compress
 	dh_fixperms
 	dh_pysupport
