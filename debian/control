@@ -24,37 +24,6 @@ Description: Compiler for Thrift definition files
  from .thrift files (containing the definitions) to the language binding
  for the supported languages.
 
-Package: python-thrift
-Architecture: any
-Section: python
-Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}
-Recommends: python-twisted-core
-Provides: ${python:Provides}
-Description: Python bindings for Thrift
- Thrift is a software framework for scalable cross-language services
- development. It combines a software stack with a code generation engine to
- build services that work efficiently and seamlessly.
- .
- This package contains the Python bindings for Thrift. You will need the thrift
- tool (in the thrift-compiler package) to compile your definition to Python
- classes, and then the modules in this package will allow you to use those
- classes in your programs.
-
-Package: python-thrift-dbg
-Architecture: any
-Section: python
-Depends: ${shlibs:Depends}, ${misc:Depends}, python-thrift (= ${binary:Version}), python-all-dbg
-Provides: ${python:Provides}
-Description: Python bindings for Thrift (debug version)
- Thrift is a software framework for scalable cross-language services
- development. It combines a software stack with a code generation engine to
- build services that work efficiently and seamlessly.
- .
- This package contains the Python bindings for Thrift with debugging symbols.
- You will need the thrift tool (in the thrift-compiler package) to compile your
- definition to Python classes, and then the modules in this package will allow
- you to use those classes in your programs.
-
 Package: libthrift-cil
 Architecture: all
 Section: libs

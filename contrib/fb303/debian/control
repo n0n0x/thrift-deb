@@ -2,7 +2,7 @@ Source: thrift-fb303
 Section: misc
 Priority: extra
 Maintainer: goffinet <goffinet@digg.com>
-Build-Depends: debhelper (>= 5), autotools-dev, autoconf, automake, libtool, libthrift-dev, libboost-dev, thrift-compiler, python, python-thrift
+Build-Depends: debhelper (>= 5), autotools-dev, autoconf, automake, libtool, libthrift-dev, libboost-dev, thrift-compiler, python
 Standards-Version: 3.8.4
 
 Package: thrift-fb303
